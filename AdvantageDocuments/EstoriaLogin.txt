@@ -1,0 +1,57 @@
+DESCRIÇÃO DA ESTORIA
+	Como usuário, 
+	Eu quero fazer login, 
+	Para que eu possa usufruir todas as funcionalidades da app http://advantageonlineshopping.com/#/.
+	
+REGRA DE NEGOCIO
+	->	Deve conseguir inserir dados do login
+	->	Deve verificar os dados inseridos pelo usuário
+	->	Deve acessar o aplicativo com sucesso após o login
+	->	Não deve permitir com usuário ou senha inválida.
+	->	Não deve permitir acessar com usuário bloqueado.
+
+
+REGRA DE TELA
+		A aplicação deve:
+
+		Apresentar formulário de login
+	    - Campo com descrição para inserir e-mail;
+	    - Campo com descrição para inserir senha;
+
+
+CRITÉRIOS DE ACEITAÇÃO
+
+	Cenário 01 [Login com sucesso]
+	Dado que eu acesse o site "https://advantageonlineshopping.com/#/"
+    E clico no campo usuario
+    E digito o usuario
+    E digito a senha
+    Quando clico em sign in
+    Entao verifico se o usuario esta logado
+
+
+	Cenário 02 [Login - Login Inválido]
+	Dado que eu acesse o site "https://advantageonlineshopping.com/#/"
+    E clico no campo usuario
+    E digito o usuario
+    E digito a senha
+    Quando clico em sign in
+    Entao verifico se a mensagem "Incorrect user name or password." foi retornada
+
+
+	Cenário 03 [Login - Usuario bloqueado]
+	Dado que eu acesse o site "https://advantageonlineshopping.com/#/"
+    E clico no campo usuario
+    E digito o usuario "<usuario>"
+    E digito a senha "<senha>"
+    E clico em sign in
+    E espero alguns segundos para tentar logar novamente
+    E verifico se a mensagem "<mensagemOR>" foi retornada
+    E clico em sign in
+    E espero alguns segundos para tentar logar novamente
+    E verifico se a mensagem "<mensagemOR>" foi retornada
+    E clico em sign in
+    E espero alguns segundos para tentar logar novamente
+    E verifico se a mensagem "<mensagemOR>" foi retornada
+    Quando clico em sign in
+    Entao verifico se a mensagem "<User is temporary blocked from login>" foi retornada

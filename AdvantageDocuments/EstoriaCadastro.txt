@@ -1,0 +1,49 @@
+DESCRIÇÃO DA ESTORIA
+	Como usuário, 
+	Eu quero criar uma conta, 
+	Para que eu possa usufruir todas as funcionalidades da app http://advantageonlineshopping.com/#/.
+	
+REGRA DE NEGOCIO
+	->	Deve conseguir inserir dados do cadastro
+	->	Deve verificar os dados inseridos pelo usuário
+	->	Deve acessar o aplicativo com sucesso após o cadastro
+
+
+REGRA DE TELA
+		A aplicação deve:
+
+		Apresentar formulário de login
+		- Campo com descrição para inserir Username;
+		- Campo com descrição para inserir e-mail;
+		- Campo com descrição para inserir Password;
+		- Campo com descrição para inserir CorfirmPassword;
+		- Campo com descrição para inserir First Name;
+		- Campo com descrição para inserir Last Name;
+		- Campo com descrição para inserir Phone Number;
+	    - Campo com descrição para inserir Country;
+	    - Campo com descrição para inserir City;
+	    - Campo com descrição para inserir Adress;
+	    - Campo com descrição para inserir State/Province/Region;
+	    - Campo com descrição para inserir Postal Code;
+
+CRITÉRIOS DE ACEITAÇÃO
+
+	Cenário 01 [Cadastro com sucesso]
+	Dado que eu acesse o site "https://advantageonlineshopping.com/#/"
+    E clico no campo usuario
+    E clico no campo create new account
+    E digito o usuario para registro
+    E digito o email
+    E digito a senha para registro
+    E confirmo a senha
+    E digito o primeiro nome
+    E digito o ultimo nome
+    E digito o celular
+    E seleciono o pais
+    E digito a cidade
+    E digito o endereco
+    E digito a regiao
+    E digito o cep
+    E clico em eu concordo
+    Quando clico em register
+    Entao verifico se o usuario esta logado
